@@ -13,14 +13,14 @@ contract Lottery {
     }
 
     function enter() public payable {
-        // require(msg);
+        require(msg.value >= getEntranceFee(),"Not enough ETH!!");
         players.push(payable(msg.sender));
     }
 
     function getEntranceFee() public view returns (uint256) {
         (, int256 price, , , ) = ethUsdPriceFeed.latestRoundData();
-        uint256 adjustedPrice = uint256(price) * 10 ** 10 ;
-        uint256 costToEnter = (usdEntryFee * 10 ** 18 ) / adjustedPrice;
+        uint256 adjustedPrice = uint256(price) * 10**10;
+        uint256 costToEnter = (usdEntryFee * 10**18) / adjustedPrice;
         return costToEnter;
     }
 

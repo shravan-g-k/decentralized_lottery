@@ -23,7 +23,7 @@ abstract contract Lottery is VRFConsumerBase, Ownable {
 
     // 0
     // 1
-    // 2
+    // 2 0
 
      constructor(
         address _priceFeedAddress,

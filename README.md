@@ -1,3 +1,4 @@
 #Decentralized Lottery
-1. Users can enter the lottery by paying a fee
-2. 
+
+Do not refer to LinkToken.sol
+Contains a lot of errors and is outdated 
